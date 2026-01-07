@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dileep Plumbing Services - Booking Confirmation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #confirmation {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dileep Plumbing Services</h1>
+        <p>Expert Plumbing Solutions - Book and Confirm Your Service Today</p>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Dileep Plumbing Services provides reliable plumbing solutions in Mohali, Chandigarh, Panchkula, and Tricity (Mohali, Punjab). With over 10 years of experience, we're here to fix leaks, install systems, and maintain your home.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Plumbing Services</h2>
+        <ul>
+            <li>Leak Detection and Repair</li>
+            <li>Pipe Installation and Replacement</li>
+            <li>Drain Cleaning</li>
+            <li>Water Heater Services</li>
+            <li>Emergency Plumbing</li>
+        </ul>
+    </section>
+
+    <section id="booking">
+        <h2>Booking Confirmation</h2>
+        <p>Fill out the form below to confirm your plumbing service booking. We'll review and confirm via email or phone.</p>
+        <form id="bookingForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label for="service">Service Type</label>
+            <select id="service" required>
+                <option value="">Select Service</option>
+                <option value="leak-repair">Leak Detection and Repair</option>
+                <option value="pipe-install">Pipe Installation</option>
+                <option value="drain-clean">Drain Cleaning</option>
+                <option value="water-heater">Water Heater Services</option>
+                <option value="emergency">Emergency Plumbing</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" required>
+
+            <label for="details">Additional Details</label>
+            <textarea id="details" rows="4" placeholder="Describe your plumbing issue..."></textarea>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <div id="confirmation">
+            <h3>Booking Confirmed!</h3>
+            <p>Thank you for your booking. We'll contact you soon at the provided details to schedule your service.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:dileepkumar9115749278@gmail.com">dileepkumar9115749278@gmail.com</a></p>
+        <p>Phone: 9888776181 | 9478312181</p>
+        <p>Service Areas: Mohali, Chandigarh, Panchkula, Tricity (Mohali, Punjab)</p>
+        <p>Follow us: <a href="https://www.instagram.com/plumber.dileep_kumar?igsh=dzN0N2RjYThtYWRq">Instagram</a> | <a href="https://www.facebook.com/DileepPlumber">Facebook</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Dileep Plumbing Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Simple confirmation (in a real site, send data to server)
+            document.getElementById('confirmation').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
